@@ -1,0 +1,33 @@
+.p-top-news {}
+
+.p-top-news__inner {
+  @include mq() {
+    max-width: rem(1092);
+  }
+}
+
+.p-top-news__wrapper {
+  @include mq() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.p-top-news__content {
+  // max-width: rem(860);
+  @include mq() {
+  margin-right: rem(16);
+  }
+}
+
+.p-top-news__btnblock {
+  text-align: center;
+  margin-top: rem(25);
+  @include mq() {
+    max-width: rem(134);
+    width: 100%;
+    height: rem(30);
+    margin-top: initial;
+  }
+}

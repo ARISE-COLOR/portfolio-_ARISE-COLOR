@@ -1,0 +1,10 @@
+.p-news-list {}
+
+.p-news-list__items {}
+
+.p-news-list__item:not(:last-child) {
+  margin-bottom: rem(29);
+  @include mq() {
+    margin-bottom: rem(31);
+  }
+}

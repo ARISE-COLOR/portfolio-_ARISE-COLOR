@@ -1,0 +1,27 @@
+.c-category-list {}
+
+.c-category-list__items {
+}
+
+.c-category-list__item {
+  margin-right: rem(22);
+  display: inline;
+  line-height: 2.7;
+  @include mq() {
+    margin-right: rem(40);
+  }
+}
+
+.c-category-list__link {
+  display: inline;
+  letter-spacing: 0.1em;
+  word-wrap: break-word;
+}
+
+.c-category-list__item:nth-of-type(1) {
+  .c-category-list__link {
+    padding: rem(3) rem(8);
+    color: #333;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,6 @@
+.l-category-list {
+  margin-top: rem(74);
+  @include mq() {
+    margin-top: rem(104);
+  }
+}

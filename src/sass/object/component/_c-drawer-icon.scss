@@ -1,0 +1,55 @@
+.c-drawer-icon{
+    height: inherit;
+    position: relative;
+    z-index:999;
+    @include mq('tab') {
+        display: none;
+    }
+}
+
+.c-drawer-icon:hover {
+    cursor: pointer;
+}
+
+.c-drawer-icon span {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $white;
+    transition: ease .3s;
+}
+   
+.c-drawer-icon span:nth-child(1) {
+    top: 0;
+}
+   
+.c-drawer-icon span:nth-child(2) {
+    margin: 4px 0;
+}
+   
+.c-drawer-icon span:nth-child(3) {
+    top: 0;
+}
+
+/*is-OPEN時の動き*/
+.c-drawer-icon.is-open span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+}
+   
+.c-drawer-icon.is-open span:nth-child(2) {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+   
+.c-drawer-icon.is-open span:nth-child(3) {
+    top: -7px;
+    transform: rotate(-45deg);
+}
+
+html.is-fixed,
+html.is-fixed body {
+  height: 100%;
+  overflow: hidden;
+}

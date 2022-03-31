@@ -1,0 +1,58 @@
+// 共通CSS
+.c-btn {
+  display: inline-block;
+  width: 100%;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  padding: rem(5) 0;
+  @include mq() {
+    font-size: rem(16);
+    padding: rem(14) 0;
+  }
+}
+
+//メインに使われている背景黒、文字白の設定
+.c-btn--black {
+  @extend .c-btn;
+  background-color: $gray;
+  color: $white;
+  border: rem(1) solid $white;
+  @include mq() {
+    font-weight: $font-weight-Medium;
+    //ホバーエフェクト
+    @include btn__hover--LtoR($white, $gray);
+  }
+}
+
+//お問い合わせページで使われている背景白、文字黒の設定
+.c-btn--white {
+  @extend .c-btn;
+  background-color: $white;
+  color: $gray;
+  @include mq() {
+    //ホバーエフェクト
+    @include btn__hover--LtoR($gray, $white);
+  }
+}
+
+//SP版は背景黒、文字白、PC版は背景白、文字黒の設定(高さは親要素に合わせる設定）
+.c-btn--half {
+  @extend .c-btn;
+  background-color: $gray;
+  color: $white;
+  border: rem(1) solid $white;
+  @include mq() {
+  letter-spacing: 0;
+  background-color: $white;
+  color: $gray;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+    //ホバーエフェクト
+    @include btn__hover--LtoR($gray, $white);
+  }
+}
